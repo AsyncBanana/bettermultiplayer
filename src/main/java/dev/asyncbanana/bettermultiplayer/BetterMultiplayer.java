@@ -104,9 +104,6 @@ public class BetterMultiplayer implements ModInitializer {
 		Item ashItem = Registry.register(Registries.ITEM, Identifier.of(BetterMultiplayer.MOD_ID, "phoenix_ash"),
 				new PhoenixAsh(ashSettings));
 		LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-			// Let's only modify built-in loot tables and leave data pack loot tables
-			// untouched by checking the source.
-			// We also check that the loot table ID is equal to the ID we want.
 			if (LootTables.TRIAL_CHAMBERS_REWARD_OMINOUS_UNIQUE_CHEST.equals(key)
 					|| LootTables.ANCIENT_CITY_ICE_BOX_CHEST.equals(key)) {
 				LootPool.Builder poolBuilder = LootPool.builder().with(ItemEntry.builder(ashItem))
