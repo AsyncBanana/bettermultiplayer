@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "bettermultiplayer",
+  "version": "1.0.0",
+  "name": "Better Multiplayer",
+  "description": "Integrate a three life system into your Minecraft game",
+  "authors": ["AsyncBanana"],
+  "contact": {
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/bettermultiplayer/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.asyncbanana.bettermultiplayer.BetterMultiplayer"]
+  },
+  "mixins": ["bettermultiplayer.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
